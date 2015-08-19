@@ -117,7 +117,6 @@ router.route('/login')
 		});
 	})
 	.post(passport.authenticate('local', { failureRedirect: '/users/login', failureFlash: 'Invalid username or password' }), function(req, res) {
-		console.log('Authentication successfully');
 		req.flash('success', 'You are logged in');
 		res.redirect('/');
 	});
